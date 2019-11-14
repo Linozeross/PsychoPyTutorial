@@ -1,9 +1,7 @@
 # PsychoPyTutorial
 In diesem Repository findet ihr alles in meinem PsychoPy Tutorial am 15.11.19 verwendete Material. Neben der Präsentation auch alle 6 Versionen des Beispielprojekts. 
 
-Zum Lernen von PsychoPy empfehle ich zusätzlich die ausgesprochen lehrreichen PsychoPy Demos. Fragen beantwortet und Unterstützung bekommt man auch im PsychoPy Forum.  
-> Demos: https://www.psychopy.org/builder/concepts.html
-> Forum: https://discourse.psychopy.org/
+Zum Lernen von PsychoPy empfehle ich zusätzlich die ausgesprochen lehrreichen PsychoPy [Demos](https://www.psychopy.org/builder/concepts.html). Fragen beantwortet und generelle Unterstützung bekommt man auch im [PsychoPy Forum](https://discourse.psychopy.org/). Insgesamt ist auch die offizielle [PsychoPy Dokumentation](https://www.psychopy.org/documentation.html) recht gut.
 
 # Beispielprojekt
 Wir implementieren einen beispielhaften Go/NoGo - Task in PsychoPy. Die Probanden sollen die Leertaste drücken wenn der Stimulus rot ist und sonst keine Taste drücken.
@@ -14,16 +12,13 @@ Eine Beschreibung was in den einzelnen Versionen umgesetzt wurde findet sich auc
 
 # Version 1
 In dieser Version erstellen wir nur eine Routine (ein Teil des Experiments das anschließend öfter wiederholt wird). Sie enthält drei Komponenten, die nacheinander angezeigt werden (Namen der Komponenten in Klammern):
-- Ein Fixationspunkt (fixation)
+- Ein [Fixationspunkt](https://www.psychopy.org/builder/components/grating.html) (fixation)
 - Der Stimulus (go_item)
-- Ein Keyboard Component (key_resp)
+- Ein [Keyboard Component](https://www.psychopy.org/builder/components/keyboard.html) (key_resp)
 
 Dabei das Verhalten des Keyboards (mittels des Parameters "Force end of routine") so angepasst, dass die Routine dann beendet wird wenn die Leertaste gedrückt wird.
 
-Über die Parameter der einzelnen Komponenten kann man in der PsychoPy - Dokumentation mehr erfahren z.B.:
-
-> Fixationspunkt: https://www.psychopy.org/builder/components/grating.html
-> Keyboard: https://www.psychopy.org/builder/components/keyboard.html
+Über die Parameter der einzelnen Komponenten kann man in der PsychoPy - Dokumentation mehr erfahren z.B.[Fixationspunkt](https://www.psychopy.org/builder/components/grating.html) oder [Keyboard](https://www.psychopy.org/builder/components/keyboard.html).
 
 # Version 2
 In dieser Version sollte unsere Routine fünf mal wiederholt werden und der Stimulus in unterschiedlichen Farben angezeigt werden.
@@ -31,7 +26,7 @@ Hier haben wir eine Schleife (Loop) hinzugefügt, damit die Routine 5x wiederhol
 
 Damit diese Variable auch eine Auswirkung hat, haben wir zusätzlich die Parameter von go_item angepasst. Unter dem Reiter Advanced, sehen wir, dass das Attribut 'Fill color' jetzt auf den Wert $go_color gesetzt wurde, und diese Zuweisung bei jeder Wiederholung geschieht (set every repeat). Damit wird in jedem Durchgang die Füllfarbe unseres Polygons auf den Wert der Variablen go_color gesetzt. So wird der Stimulus in unseren fünf Wiederholungen einmal rot, grün, schwarz, weiß und lachsfarben angezeigt.
 
-> Mehr Informationen zu verschiedenen Schleifentypen etc.: https://www.psychopy.org/builder/flow.html
+Mehr Informationen zu verschiedenen Schleifentypen gibt es auch in der [Dokumentation](https://www.psychopy.org/builder/flow.html)
 
 # Version 3
 In dieser Version sollte erst ein Instruktionsbildschirm angezeigt werden und Antworten als richtig oder falsch klassifiziert werden.
@@ -45,8 +40,7 @@ In der neuen Komponente (code) wurden ein paar Zeilen Python code eingefügt. Co
 
 Damit der Stimulus auch an der richtigen Position angezeigt wird, wurde zusätzlich das Attribut Position von unserem Stimulus (go_item) mit der neuen Variable $stim_pos belegt.
 
-> Mehr Information zu Code Komponenten: https://www.psychopy.org/builder/components/code.html
-> Mehr Information zu den verwendeten Python Code Befehlen: https://www.w3schools.com/python/python_conditions.asp
+Mehr Information zu [Code Komponenten](https://www.psychopy.org/builder/components/code.html) und zu den verwendeten Python Code Befehlen [if und else](https://www.w3schools.com/python/python_conditions.asp).
 
 # Version 4b
 Veränderte Code Komponente um zu zeigen wie man Objekte während einer Routine in eine zufällige Richtung bewegen kann.
