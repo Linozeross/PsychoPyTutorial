@@ -1,6 +1,10 @@
 # PsychoPyTutorial
 In diesem Repository findet ihr alles in meinem PsychoPy Tutorial am 15.11.19 verwendete Material. Neben der Präsentation auch alle 6 Versionen des Beispielprojekts. 
 
+Zum Lernen von PsychoPy empfehle ich zusätzlich die ausgesprochen lehrreichen PsychoPy Demos. Fragen beantwortet und Unterstützung bekommt man auch im PsychoPy Forum.  
+> Demos: https://www.psychopy.org/builder/concepts.html
+> Forum: https://discourse.psychopy.org/
+
 # Beispielprojekt
 Wir implementieren einen beispielhaften Go/NoGo - Task in PsychoPy. Die Probanden sollen die Leertaste drücken wenn der Stimulus rot ist und sonst keine Taste drücken.
 
@@ -17,9 +21,9 @@ In dieser Version erstellen wir nur eine Routine (ein Teil des Experiments das a
 Dabei das Verhalten des Keyboards (mittels des Parameters "Force end of routine") so angepasst, dass die Routine dann beendet wird wenn die Leertaste gedrückt wird.
 
 Über die Parameter der einzelnen Komponenten kann man in der PsychoPy - Dokumentation mehr erfahren z.B.:
-Fixationspunkt: https://www.psychopy.org/builder/components/grating.html
 
-Keyboard: https://www.psychopy.org/builder/components/keyboard.html
+> Fixationspunkt: https://www.psychopy.org/builder/components/grating.html
+> Keyboard: https://www.psychopy.org/builder/components/keyboard.html
 
 # Version 2
 In dieser Version sollte unsere Routine fünf mal wiederholt werden und der Stimulus in unterschiedlichen Farben angezeigt werden.
@@ -27,7 +31,7 @@ Hier haben wir eine Schleife (Loop) hinzugefügt, damit die Routine 5x wiederhol
 
 Damit diese Variable auch eine Auswirkung hat, haben wir zusätzlich die Parameter von go_item angepasst. Unter dem Reiter Advanced, sehen wir, dass das Attribut 'Fill color' jetzt auf den Wert $go_color gesetzt wurde, und diese Zuweisung bei jeder Wiederholung geschieht (set every repeat). Damit wird in jedem Durchgang die Füllfarbe unseres Polygons auf den Wert der Variablen go_color gesetzt. So wird der Stimulus in unseren fünf Wiederholungen einmal rot, grün, schwarz, weiß und lachsfarben angezeigt.
 
-Mehr Informationen zu verschiedenen Schleifentypen etc.: https://www.psychopy.org/builder/flow.html
+> Mehr Informationen zu verschiedenen Schleifentypen etc.: https://www.psychopy.org/builder/flow.html
 
 # Version 3
 In dieser Version sollte erst ein Instruktionsbildschirm angezeigt werden und Antworten als richtig oder falsch klassifiziert werden.
@@ -41,9 +45,8 @@ In der neuen Komponente (code) wurden ein paar Zeilen Python code eingefügt. Co
 
 Damit der Stimulus auch an der richtigen Position angezeigt wird, wurde zusätzlich das Attribut Position von unserem Stimulus (go_item) mit der neuen Variable $stim_pos belegt.
 
-Mehr Information zu Code Komponenten: https://www.psychopy.org/builder/components/code.html
-
-Mehr Information zu den verwendeten Python Code Befehlen: https://www.w3schools.com/python/python_conditions.asp
+> Mehr Information zu Code Komponenten: https://www.psychopy.org/builder/components/code.html
+> Mehr Information zu den verwendeten Python Code Befehlen: https://www.w3schools.com/python/python_conditions.asp
 
 # Version 4b
 Veränderte Code Komponente um zu zeigen wie man Objekte während einer Routine in eine zufällige Richtung bewegen kann.
@@ -56,16 +59,10 @@ Wir haben 2 weitere Routinen sowie eine neue Schleife (practiceLoop) hinzugefüg
 # Version 6
 In dieser letzten Version wollten wir die Übungsrunden optional machen und Veränderungen mit dem Coder vornehmen. 
 
-Wir haben zuerst die 'Experiment Settings' mit einem Klick auf den entsprechenden Button im Builder verändert und eine weitere Zeile 'practice' mit Defaultwert True eingefügt. Anschließend haben wir die bei Ausführung von PsychoPy automatisch generierte python-Datei 06version_lastrun.py im Coder geöffnet und in Zeile 244 drei Zeilen Code eingefügt. Diese überprüfen, ob bei Start des Experiments das Häkchen bei practice gesetzt ist. Falls nicht, wird durch den Befehl 'break' die komplette Schleife practiceLoop übersprungen. Das Experiment springt also direkt in das Hauptexperiment.
+Wir haben zuerst die 'Experiment Settings' mit einem Klick auf den entsprechenden Button im Builder verändert und eine weitere Zeile 'practice' mit Defaultwert True eingefügt. Anschließend haben wir die bei Ausführung von PsychoPy automatisch generierte python-Datei 06version_lastrun.py im Coder geöffnet und in Zeile 244 drei Zeilen Code eingefügt. Diese überprüfen, ob bei Start des Experiments das Häkchen bei practice gesetzt ist. Falls nicht, wird durch den Befehl 'break' die komplette Schleife practiceLoop übersprungen. Das Experiment springt also direkt in das Hauptexperiment. 
+Damit die Datei nicht überschrieben wird, haben wir Sie anschließend in 06version.py umbenannt. Um diese Änderungen auszuprobieren, muss man die Datei 06version.py im Coder öffnen und starten.
 
 Diese Änderung sollte zeigen wie der Coder funktioniert. Außerdem sollte klarwerden, dass es in einigen Fällen praktisch sein kann kleinere Anpassungen im Coder vorzunehmen.
-
-
-
-
-
-
-
 
 
 
